@@ -85,7 +85,7 @@ const password = 'testPass';
 const email = 'test@example.com';
 const registry = 'https://npm.example.com';
 const scope = '@myScope';
-const configPath: './custom/path/';
+const configPath = './custom/path/';
 
 npmLogin(username, password, email, registry, scope, configPath);
 ```

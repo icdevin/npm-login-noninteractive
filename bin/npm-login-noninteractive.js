@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 
-const getArg = arg => process.argv[process.argv.indexOf(arg)];
+const getArg = arg => {
+  const argIndex = process.argv.indexOf(arg);
+  return argIndex === -1 ? process.argv[argIndex + 1] : null;
+};
 
 const login = () => {
   const user = getArg('-u') || process.env.NPM_USER;

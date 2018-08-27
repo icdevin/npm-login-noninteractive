@@ -249,10 +249,11 @@ describe('Can login to default registry', () => {
 
   it('with correct credentials', done => {
     const args = ncl.processArguments(
-      process.env.NPM_USER, process.env.NPM_PASS, process.env.NPM_EMAIL
+      process.env.NPM_USER, process.env.NPM_PASS, process.env.NPM_EMAIL,
+      process.env.NPM_REGISTRY,
     );
     ncl.login(args, (err, data) => {
-      expect(data).to.have.property('ok', true);
+      expect(data).to.have.property('ok');
       expect(data).to.have.property('token');
       done();
     });

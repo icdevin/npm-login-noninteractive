@@ -2,7 +2,7 @@
 
 const getArg = arg => {
   const argIndex = process.argv.indexOf(arg);
-  return argIndex === -1 ? process.argv[argIndex + 1] : null;
+  return argIndex !== -1 ? process.argv[argIndex + 1] : null;
 };
 
 const login = () => {

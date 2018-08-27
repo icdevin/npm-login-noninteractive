@@ -14,7 +14,8 @@
     "npm-login-noninteractive": "./bin/npm-login-noninteractive.js"
   },
   "scripts": {
-    "test": "mocha ./tests"
+    "test": "mocha ./tests",
+    "prepublish": "npm run test"
   },
   "dependencies": {
     "npm-registry-client": "8.6.0"
